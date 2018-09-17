@@ -71,7 +71,7 @@ public class CSwiftV {
         return CSwiftV.split(separator, string: string).map { element in
             if let first = element.first, let last = element.last , first == "\"" && last == "\"" {
                 let range = element.index(after: element.startIndex) ..< element.index(before: element.endIndex)
-                return element[range]
+                return String(element[range])
             }
             return element
         }
